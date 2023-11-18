@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+/* リセットCSS */
+html, body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* ヘッダー */
+.header {
+    background-color: #E15A28;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo a {
+    text-decoration: none; /* 下線を消す */
+    color: inherit; /* 親要素（.logo）のテキストカラーを継承 */
+    cursor: pointer; /* マウスホバー時に指マークにする */
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav ul li:last-child {
+    margin-right: 0;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* メインコンテンツ */
+.main-content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.result-view {
+    display: inline;
+}
+
+/* 検索結果リスト */
+.search-results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.result-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    display: flex; /* 要素を横に配置 */
+}
+
+.result-image {
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
+
+.result-details{
+    text-align: left;
+}
+
+.result-item h2 {
+    font-size: 25px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.result-item p {
+    margin: 5px 0;
+    font-size: 14px;
+}

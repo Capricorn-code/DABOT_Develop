@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>店舗検索結果</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-content">
+            <!-- ロゴやタイトルなどの要素を配置 -->
+            <div class="logo"><a href="https://example.com">サイト名</a></div>
+            <nav class="nav">
+                <!-- ナビゲーションメニューなどの要素を配置 -->
+                <ul>
+                    <li><a href="#">ブランド一覧</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <h1 id="result-view">店舗検索結果一覧</h1>
+
+        <p class="result_number">検索結果 <span id="total-count">3</span>件</p>
+
+        <!-- 検索結果リスト -->
+        <div id="search-results"　class="search-results">
+            <!-- 各検索結果アイテム -->
+            <div class="result-item">
+                <div class="result-image">
+                    <img src="C:/Users/yamah/portfolio/img/TFL.jpg" alt="T.F.L">
+                </div>
+                <div class="result-data">
+                    <h2>TIME FOR LIVIN</h2>
+                    <div class="result-details">
+                        <p>住所 ： 〒460-0008 愛知県名古屋市中区栄５丁目１３−１７ T.F.L ビル 1F</p>
+                        <p>電話番号 ： 052-263-4704</p>
+                        <p>営業時間 ： 12～20時(土・日曜、祝日は11時～)</p>
+                        <p>定休日 ： 不定休(年末年始や夏期・冬期の臨時休業あり)</p>
+                        <p>取扱ブランド ： BUTTER, FTC</p>    
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-item">
+                <div class="result-image">
+                    <img src="C:/Users/yamah/portfolio/img/rawdrip-hara.jpg" alt="RAWDRIP Harajuku">
+                </div>
+                <div class="result-data">
+                    <h2>RAWDRIP Harajuku</h2>
+                    <div class="result-details">
+                        <p>住所 ： 〒150-0001 東京都渋谷区神宮前4-28-22 ベル・パルス原宿 2F</p>
+                        <p>電話番号 ： 03-3796-6338</p>
+                        <p>営業時間 ： 11:00～20:30</p>
+                        <p>定休日 ： 無休</p>
+                        <p>取扱ブランド ： Carhartt, Dickies</p>    
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-item">
+                <div class="result-image">
+                    <img src="C:/Users/yamah/portfolio/img/prov.JPG" alt="prov">
+                </div>
+                <div class="result-data">
+                    <h2>PROV</h2>
+                    <div class="result-details">
+                        <p>住所 ： 〒150-0001 東京都渋谷区神宮前４丁目２８−１８ カトル・バン原宿 2F</p>
+                        <p>電話番号 ： 03-6447-0660</p>
+                        <p>営業時間 ： 11:00～20:30</p>
+                        <p>定休日 ： 無休</p>
+                        <p>取扱ブランド ： HELLRAZOR, ALLTIMERS</p>    
+                    </div>
+                </div>
+            </div>
+
+            <!-- 他の検索結果アイテムも同様に追加 -->
+        </div>
+    </main>
+    <!-- script src="script.js"></!-->
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ポートフォリオサイト</title>
+<link rel="stylesheet" media="all" href="css/ress.min.css" />
+<link rel="stylesheet" media="all" href="css/style.css" />
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/style.js"></script>
+<!-- jquery.bgswitcher.js を読み込む -->
+<script src="js/jquery.bgswitcher.js"></script>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="img/favicon.png">
+    
+</head>
+<body>
+
+<!--サイトタイトル等の画面の上記要素-->
+<header> 
+
+<div class="headset">    
+<div class="row">
+    <div class="col span-12">
+    <div class="head">
+        <h1 class="title1"><a href="index.html">DABOT</a></h1>
+		<!--<div class="snsbox">
+			<img src="img/in-icon.png" alt="Instagram">
+		    <img src="img/fb-icon.png" alt="Facebook"></div>
+        </div>
+    -->
+    </div></div>
+</div>
+<div class="container">
+<div class="row">
+    <div class="col span-12">
+        <nav>
+            <div id="open"></div>
+            <div id="close"></div>   
+            <div id="navi">
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="subpage.html">店舗一覧</a></li>
+            <li><a href="subpage.html">店舗登録について</a></li>
+            <li><a href="subpage.html">お問い合わせ</a></li>
+            </ul>
+                </div>
+        </nav>
+    </div>
+        </div>
+    </div>
+    </header>
+<!-- ここまでがヘッダー要素 -->
+
+    <!-- 検索を実施する箇所 -->
+        <div class="bgimg-slider">
+        <link rel="stylesheet" type="text/css" href="style.css">
+            <form action="#" class="search-form-005">
+            <p class="explain">スケーター/ストリートブラント 取扱店舗検索サイト</p>
+                <h1>DABOT</h1>
+                    <input type="text" placeholder="キーワードを入力" id="keyword">
+                <input type="submit" value="検索" id="ID_SUBMIT"/>
+                <br>
+                <button id="openRegionPopup">エリアから検索</button>
+            </form>
+        </div>
+        <!-- 検索を実施する箇所 -->
+    </div>
+        </div>
+    <main>
+        
+<section>
+<div class="container">
+	<h2 class="catch">Brands List</h2>
+<div class="row">
+	<div class="col span-4">
+	<figure>
+		<img src="img/ftc_3.jpg" alt="画像">
+		<figcaption>FTC</figcaption>
+		</figure>
+	</div>
+	<div class="col span-4">
+	<figure>
+		<img src="img/yardsale.jpg" alt="画像">
+		<figcaption>YardSale</figcaption>
+	</div>
+	<div class="col span-4">
+	<figure>
+		<img src="img/polar.jpg" alt="画像">
+		<figcaption>Polar skate co</figcaption>
+		</figure>
+	</div>
+    </div>    
+<div class="row">
+	<div class="col span-4">
+	<figure>
+		<img src="img/dime.jpg" alt="画像">
+		<figcaption>Dime mtl</figcaption>
+		</figure>
+	</div>
+	<div class="col span-4">
+	<figure>
+		<img src="img/hell.jpg" alt="画像">
+		<figcaption>HELLRAZOR</figcaption>
+		</figure>
+	</div>
+	<div class="col span-4">
+	<figure>
+		<img src="img/butter.jpg" alt="画像">
+		<figcaption>Butter goods</figcaption>
+		</figure>
+	</div>
+    </div>
+<div class="row">
+    <div class="col span-4">
+    <figure>
+        <img src="img/evisen.jpg" alt="画像">
+        <figcaption>Evisen</figcaption>
+            </figure>
+        </div>
+        <div class="col span-4">
+        <figure>
+            <img src="img/obey.jpg" alt="画像">
+            <figcaption>OBEY</figcaption>
+            </figure>
+        </div>
+        <div class="col span-4">
+        <figure>
+        <img src="img/snacks.jpg" alt="画像">
+        <figcaption>QUARTER SNACKS</figcaption>
+        </figure>
+    </div>
+    </div> 
+	<p class="center"><button>その他のブランド</button></p>
+        </div>
+</section>
+    </main>
+    <footer>
+<div class="container">
+<div class="row">
+    <div class="col span-4">
+        <h5>問い合わせ</h5>
+        <!--<p>ここにSNSやテキストなどが入ります。SNSやテキストなどが入ります。</p>-->
+    </div>
+    <div class="col span-4">
+        <h5>利用規約</h5>
+        <!--<p>ここにSNSやテキストなどが入ります。SNSやテキストなどが入ります。</p>-->
+    </div>
+    <div class="col span-4">
+        <h5>プライバシーポリシー</h5>
+        <!--<p>ここにSNSやテキストなどが入ります。SNSやテキストなどが入ります。</p>-->
+    </div>
+        </div>
+</div>
+    </footer>
+    <div class="copyright">
+<div class="container">
+<div class="row">
+    <div class="col"><hr>
+    Copyright © <a href="https://popo-design.net" target="_blank">popodesign. </a>
+    
+    </div>    
+        </div>
+    </div>
+        </div>
+<p id="pagetop"><a href="#">TOP</a></p>    
+</body>
+
+<!-- オーバーレイ -->
+<div id="overlay"></div>
+
+<!-- 地域選択のポップアップ -->
+<div id="regionPopup">
+    <h2>エリアを指定</h2>
+    <form id="regionForm">
+        <label>
+            <input type="checkbox" name="region" value="tokyo"> 渋谷
+        </label>
+        <label>
+            <input type="checkbox" name="region" value="osaka"> 原宿
+        </label>
+        <label>
+            <input type="checkbox" name="region" value="tokyo"> 新宿
+        </label>
+        <label>
+            <input type="checkbox" name="region" value="osaka"> 町田
+        </label>
+        <label>
+            <input type="checkbox" name="region" value="tokyo"> 原宿
+        </label>
+        <label>
+            <input type="checkbox" name="region" value="osaka"> 横浜
+        </label>
+        <label>
+            <input type="checkbox" name="region" value="tokyo"> 名古屋
+        </label>
+        <label>
+            <input type="checkbox" name="region" value="osaka"> 大阪
+        </label>
+        <label>
+            <input type="checkbox" name="region" value="osaka"> 山梨
+        </label>
+        <label>
+            <input type="checkbox" name="region" value="tokyo"> 新潟
+        </label>
+        <label>
+            <input type="checkbox" name="region" value="osaka"> 広島
+        </label>
+        <label>
+            <input type="checkbox" name="region" value="tokyo"> 長崎
+        </label>
+        <label>
+            <input type="checkbox" name="region" value="osaka"> 鹿児島
+        </label>
+        <!-- 他の地域も同様に追加 -->
+        <input type="button" value="検索" id="regionSearchButton">
+        <input type="button" value="閉じる" id="closeRegionPopup">
+    </form>
+</div>
+<!-- 検索を実施する箇所 -->
+
+</html>

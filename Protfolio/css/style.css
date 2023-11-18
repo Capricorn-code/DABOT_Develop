@@ -1,0 +1,436 @@
+@charset "UTF-8";
+@import url("grid.css");
+
+:root { /* 色変更される場合は、#以降のカラーコードを変更してください IE非対応 */
+    --base-color: #000000c8;
+    --link-color:#333333;
+    --linkhover-color: #999;
+    --border-color: #ccc;
+    --white-color: #fff;
+}
+
+img {
+	max-width:100%;
+	height: auto;/*高さ自動*/
+}
+a {
+    display:block;
+    color: var(--link-color);
+    text-decoration-line: none;
+}
+a:hover { 
+    color: var(--linkhover-color);
+}
+a img:hover {
+	opacity: 0.8;
+}
+.underline {
+	border-bottom: 3px solid var(--base-color);
+	padding-bottom: 0.5rem;
+}
+.center {
+	text-align: center;
+}
+
+/*ヘッダー
+-------------------------------------*/
+
+.head {
+	display: flex;
+    flex-direction: row;
+    padding: 1rem 0 0 0;
+    margin: 0;
+    justify-content: space-between;
+}
+
+.head h1 { 
+    margin-left: 100px; /* 任意の空白のサイズを指定 */
+    padding: 1rem 0;
+	font-weight: 800;
+    font-size: 90px; /* フォントサイズを変更 */
+	letter-spacing: 3px;
+    transform: skew(-15deg); /* 文字を斜めに傾ける */
+    font-weight: bold;       /* 文字を太くする */
+    font-family: 'Impact', sans-serif; /* おしゃれなフォントを指定（Your-Fancy-Fontは実際のフォント名に置き換えてください） */
+    
+}
+.snsbox {
+	margin-left: auto;
+    margin-right: 100px;
+	font-size: 3.0rem;
+	padding: 1rem 0 0 0;
+}
+nav ul {
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+	margin-bottom: 0.5rem;
+}
+nav li {
+    display: block;
+    flex: 0 0 15%;
+}
+nav li a {
+    text-decoration: none;
+    text-align: center;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+nav a {
+    padding: 1rem;
+}
+
+@media screen and (min-width: 768px){
+/* PC時はMENUボタンを非表示 */
+#open,#close {
+    display: none !important;
+}
+
+#navi {
+    display: block !important;
+}
+}
+
+@media screen and (max-width: 768px){
+.head {
+	flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.telbox {
+	margin-left: 0;
+	text-align: center;
+}
+.head #open,#close  {
+    position: absolute;
+    top: 28px;
+    right: 12px;
+    }
+nav ul {
+	flex-direction: column;
+}
+
+nav li {
+	padding-top: 0;
+	border-bottom: 1px solid var(--border-color);
+	margin-bottom: 0;
+}
+/* スマホ時はMENUボタンを表示 */
+#open {
+    display: block;
+    background: url(../img/button.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+}
+#close  {
+    display: block;
+    background: url(../img/button2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+}
+/* スマホ時はメニューを非表示 */
+#navi {
+    display: none;
+}
+}
+
+/*メイン画像
+-------------------------------------*/
+.mainimg img {
+	width: 100vw;
+}
+
+/*メインコンテンツ
+-------------------------------------*/
+main {
+    margin: 5rem 0 5rem 0;
+}
+
+/*キャッチタイトル
+-------------------------------------*/
+h2.catch {
+	text-align: center;
+	color: var(--link-color);
+	font-size: 4.0rem;
+	margin-bottom: 3rem;
+}
+
+/*フッター
+-------------------------------------*/
+footer {
+    background-color: var(--white-color);
+    padding: 3rem 0;
+}
+footer h5 {
+    border-bottom: 1px solid var(--border-color);
+}
+
+/*コピーライト
+-------------------------------------*/
+.copyright {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--white-color);
+}
+.copyright a {
+    color: var(--base-color);
+    text-decoration: none;
+	display: inline-block;
+}
+
+/*ページトップへ戻るボタン
+-------------------------------------*/
+#pagetop {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+#pagetop a {
+    display: block;
+    background: var(--link-color);
+    color: var(--white-color);
+    width: 50px;
+    padding: 10px 5px;
+    text-align: center;
+}
+#pagetop a:hover {
+    background: var(--linkhover-color);
+}
+/*パンくずリスト
+-----------------------------------*/
+.breadcrumb {
+    margin: 0 0 1em 0;
+    padding: 0;	
+}
+.breadcrumb li {
+    list-style-type: none;
+}
+.breadcrumb li a {
+    display: inline-block;
+    color: var(--link-color);
+}
+
+/*メイン背景*/
+body {
+    background-color: #EEEEEE; /* ここで背景色を指定 */
+    background-image: 
+        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0px, rgba(255, 255, 255, 0.1) 10px, transparent 10px, transparent 20px),
+        repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0px, rgba(255, 255, 255, 0.1) 10px, transparent 10px, transparent 20px);
+    background-size: 20px 20px; /* マスのサイズを調整 */
+    margin: 0;
+    padding: 0;
+}
+
+/*    -----------------------------------------------   */
+
+/* ナビゲーションのリンクにスタイルを適用 */
+#navi ul li a {
+    font-weight: bold; /* テキストを太くする */
+    /* 他のスタイルを追加 */
+}
+
+/* ナビゲーションのリンクにマウスを乗せた時のスタイル */
+#navi ul li a:hover {
+    font-weight: bold; /* テキストを太くする */
+    color: #333; /* テキストの色を変更 */
+    /* 他のホバースタイルを追加 */
+}
+
+/* ナビゲーションリストのスタイル */
+#navi ul {
+    /* リストのスタイルを変更 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ナビゲーションリストのリストアイテムのスタイル */
+#navi ul li {
+    display: inline-block; /* リストアイテムを横並びにする */
+    margin-right: 20px; /* リストアイテム間の間隔を設定 */
+}
+
+/* メイン画像のスタイル(背景) */
+.bgimg-slider {    
+    /*background-image: url('file:///C:/Users/81907/OneDrive/デスクトップ/portfolio/img/top_3.jpg');*/
+    background-size: cover; /* 画像をウィンドウ全体に合わせる */
+    background-repeat: no-repeat; /* 画像の繰り返し表示を無効にする */
+    height: 1400px;
+}
+
+.explain {
+    font-weight: bold; /* テキストを太文字にする */
+    font-size: 1.1em;  /*テキストのサイズを大きくする */
+    text-align: center; /* テキストを中央揃えにする */
+  }
+
+.search-form-005 {
+    position: absolute;
+    top: 700px; /* 画像の上からの距離を調整 (適切な値に変更) */
+    left: 50%; /* 画像の中央に配置 */
+    transform: translateX(-50%); /* 画像の中央に配置 */
+   /* background-color: rgba(255, 255, 255, 0.7); /* 背景色を設定 */
+    padding: 10px; /* 内側の余白を設定 
+    /*border-radius: 5px; /* 角丸の設定 */
+    /*box-shadow: 0 2px 4px rgba(130, 130, 130, 0.2); /* ドロップシャドウを設定 */
+}
+
+.search-form-005 h1 {
+    font-size: 150px; /* フォントサイズを変更 */
+    font-family: 'Impact', sans-serif; /* フォントファミリーを変更（Your-Font-Familyは実際のフォント名に置き換えてください） */
+    font-weight: bold; /* フォントの太さを変更 */
+    transform: skew(-15deg); /* 文字を斜めに傾ける */
+    color: #333333;
+}
+
+/*検索ボックスのスタイル*/
+
+#keyword {
+    width: 250px; /* 幅を変更 */
+    height: 40px; /* 高さを変更 */
+    padding: 10px; /* テキストの内側の余白を調整 */
+    border: 1px solid #ccc; /* 枠線の設定 */
+    border-radius: 5px; /* 角丸を追加 */
+    background-color: #f2f2f2; /* 背景色を変更 */
+    font-size: 1em; /* フォントサイズを変更 */
+    /* 他のスタイルを追加 */
+}
+
+/* 検索ボタンのスタイル */
+#ID_SUBMIT {
+    width: 100px;
+    height: 40px;
+    background-color: #333333; /* 背景色を変更 */
+    color: #fff; /* テキスト色を変更 */
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    /* 他のスタイルを追加 */
+}
+
+#ID_SUBMIT:hover {
+    background-color: #555555; /* ホバー時の背景色を変更 */
+    /*color: #fff;*/ /* ホバー時のテキスト色を変更 */
+    /* 他のホバースタイルを追加 */
+}
+
+/* エリアから検索ボタンのスタイル */
+#openRegionPopup {
+    margin-left: 20px;
+    width: 300px;
+    height: 40px;
+    background-color: #333333; /* 背景色を変更 */
+    color: #fff; /* テキスト色を変更 */
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    /* 他のスタイルを追加 */
+}
+
+/* エリアから検索ボタンのホバー時のスタイル */
+#openRegionPopup:hover {
+    background-color: #555555; /* ホバー時の背景色を変更 */
+    /* color: #fff; */ /* ホバー時のテキスト色を変更 */
+    /* 他のホバースタイルを追加 */
+}
+
+/* ポップアップ全体のスタイル */
+#regionPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #EEEEEE;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    max-width: 300px;
+    width: 90%;
+}
+
+/* タイトルのスタイル */
+#regionPopup h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+}
+
+/* 下線（区切り線）のスタイル */
+#regionPopup h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+/* チェックボックスとラベルのスタイル */
+#regionForm label {
+    display: inline-block; /* インラインブロック要素として表示 */
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #555;
+    width: 40%; /* 幅を設定して5つのチェックボックスで折り返す */
+}
+
+/* 5個ごとに改行 */
+#regionForm label:nth-child(5n + 1) {
+    clear: left; /* 5個ごとに改行 */
+}
+
+
+/* ボタンのスタイル */
+#regionPopup input[type="button"] {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-right: 10px;
+    text-align: center; /* テキストを中央揃え */
+    line-height: 1; /* ボタンの高さとテキストの高さを一致させる */
+    /* ボタンのスタイル */
+    width: 100%;
+}
+
+/* ボタンのホバーエフェクト */
+#regionPopup input[type="button"]:hover {
+    background-color: #D3D3D3;
+}
+
+
+/* オーバーレイのスタイル */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
