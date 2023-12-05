@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.list_container {
+    max-width: 1200px; /* 適切な最大幅を設定してください */
+    margin: 0 auto; /* 中央寄せにするために左右のマージンを自動で設定 */
+    padding: 0 20px; /* 適切な左右のパディングを設定してください */
+}
+
+.initial_index_result ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* 要素が1行に収まり切らない場合は新しい行に折り返す */
+}
+
+.initial_index_result li {
+    margin-right: 10px; /* 適切な間隔を設定してください */
+    width: 23%; /* 4つ横並びにするために各要素の幅を調整 */
+    box-sizing: border-box; /* ボックスモデルの影響を受けないように設定 */
+}
+
+.initial_index_result a {
+    text-decoration: none;
+    color: #333; /* リンクの色を適切に設定してください */
+}
