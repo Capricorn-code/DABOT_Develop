@@ -6,65 +6,46 @@ html, body, h1, h2, p, ul, li {
     padding: 0;
 }
 
-/* ヘッダー */
-.header {
-    background-color: #E15A28;
-    color: #fff;
-    padding: 10px 0;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.logo a {
-    text-decoration: none; /* 下線を消す */
-    color: inherit; /* 親要素（.logo）のテキストカラーを継承 */
-    cursor: pointer; /* マウスホバー時に指マークにする */
-}
-
-.nav ul {
-    list-style: none;
-}
-
-.nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-.nav ul li:last-child {
-    margin-right: 0;
-}
-
-.nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
 
 /* メインコンテンツ */
 .main-content {
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 100px auto;
     padding: 0 20px;
+}
+
+.header-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 h1 {
     font-size: 20px;
 }
 
+.sorting-section {
+    display: flex; /* フレックスボックスを使用して要素を横に配置 */
+    align-items: center; /* アイテムを中央揃えにする */
+}
+
+label {
+    margin-right: 10px; /* ラベルとセレクトボックスの間にスペースを作成 */
+}
+
 .result-view {
     display: inline;
+}
+
+.result_number {
+    display: flex; /* フレックスボックスを使用して要素を横に配置 */
+    text-align: right;
+    margin-left: auto;
+}
+
+.result_number #total-count {
+    font-weight: bold;
+    font-size: 1.2em; /* 1.2倍のフォントサイズ */
 }
 
 /* 検索結果リスト */
@@ -82,6 +63,8 @@ h1 {
 }
 
 .result-image {
+    width: 300px;
+    height: 200px;
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;

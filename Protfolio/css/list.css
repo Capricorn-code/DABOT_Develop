@@ -5,8 +5,29 @@ body {
 
 .list_container {
     max-width: 1200px; /* 適切な最大幅を設定してください */
-    margin: 0 auto; /* 中央寄せにするために左右のマージンを自動で設定 */
+    margin: 100px auto; /* 中央寄せにするために左右のマージンを自動で設定 */
     padding: 0 20px; /* 適切な左右のパディングを設定してください */
+}
+
+.list_container h1 {
+    font-weight: bold; /* 太文字に設定します */
+    letter-spacing: 0.3px;
+    font-family: 'Impact', sans-serif;
+}
+
+.intial_index a {
+    display: inline-block;
+    margin-right: 10px; /* 適切なマージンを設定してください */
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #333; /* リンクの色を適切に設定してください */
+}
+
+.initial_index_result h3 {
+    border-bottom: 0.5px solid #000; /* 下線のスタイルを設定します。適切な色を選択してください。 */
+    display: inline-block; /* h3要素を横並びにするために必要なスタイル */
+    padding-bottom: 5px; /* 適切な下部のパディングを設定してください */
+    width: 1000px;
 }
 
 .initial_index_result ul {

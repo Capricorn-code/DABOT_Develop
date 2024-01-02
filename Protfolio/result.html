@@ -1,80 +1,120 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>店舗検索結果</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" media="all" href="css/ress.min.css" />
+    <link rel="stylesheet" media="all" href="css/style.css" />
+    <script src="js/script.js"></script>
 </head>
+
 <body>
     <!-- ヘッダー -->
     <header class="header">
-        <div class="header-content">
-            <!-- ロゴやタイトルなどの要素を配置 -->
-            <div class="logo"><a href="https://example.com">サイト名</a></div>
-            <nav class="nav">
-                <!-- ナビゲーションメニューなどの要素を配置 -->
-                <ul>
-                    <li><a href="#">ブランド一覧</a></li>
-                </ul>
-            </nav>
-        </div>
+        <div class="headset">
+            <div class="row">
+                <div class="col span-12">
+                    <div class="head">
+                        <h1 class="title1"><a href="index.html">DABOT</a></h1>
+                        <!--<div class="snsbox">
+                <img src="img/in-icon.png" alt="Instagram">
+                <img src="img/fb-icon.png" alt="Facebook"></div>
+            </div>
+        -->
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col span-12">
+                        <nav>
+                            <div id="open"></div>
+                            <div id="close"></div>
+                            <div id="navi">
+                                <ul>
+                                    <li><a href="index.html">ホーム</a></li>
+                                    <li><a href="subpage.html">店舗一覧</a></li>
+                                    <li><a href="subpage.html">ブランド一覧</a></li>
+                                    <li><a href="subpage.html">店舗登録について</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
     </header>
 
     <!-- メインコンテンツ -->
     <main class="main-content">
         <h1 id="result-view">店舗検索結果一覧</h1>
+        <div class="header-section">
 
-        <p class="result_number">検索結果 <span id="total-count">3</span>件</p>
+            <p class="sorting-section">
+                並び順：
+                <label for="sort-order"></label>
+                <select id="sort-order">
+                    <option value="default">選択する</option>
+                    <option value="nameAsc">店舗名順（昇順）</option>
+                    <option value="nameDesc">店舗名順（降順）</option>
+                    <option value="addressAsc">エリア順（昇順）</option>
+                    <option value="addressDesc">エリア順（降順）</option>
+                </select>
+            </p>
 
+            <div class="result_number">検索結果 <span id="total-count">3</span>件</div>
+        </div>
         <!-- 検索結果リスト -->
-        <div id="search-results"　class="search-results">
+        <div id="search-results" 　class="search-results">
             <!-- 各検索結果アイテム -->
             <div class="result-item">
                 <div class="result-image">
-                    <img src="C:/Users/yamah/portfolio/img/TFL.jpg" alt="T.F.L">
+                    <img src="img/TFL.jpg" alt="T.F.L">
                 </div>
                 <div class="result-data">
-                    <h2>TIME FOR LIVIN</h2>
+                    <h2><a href="http://www.timeforlivin.com/">TIME FOR LIVIN</a></h2>
                     <div class="result-details">
                         <p>住所 ： 〒460-0008 愛知県名古屋市中区栄５丁目１３−１７ T.F.L ビル 1F</p>
                         <p>電話番号 ： 052-263-4704</p>
                         <p>営業時間 ： 12～20時(土・日曜、祝日は11時～)</p>
                         <p>定休日 ： 不定休(年末年始や夏期・冬期の臨時休業あり)</p>
-                        <p>取扱ブランド ： BUTTER, FTC</p>    
+                        <p>取扱ブランド ： BUTTER, FTC</p>
                     </div>
                 </div>
             </div>
 
             <div class="result-item">
                 <div class="result-image">
-                    <img src="C:/Users/yamah/portfolio/img/rawdrip-hara.jpg" alt="RAWDRIP Harajuku">
+                    <img src="img/rawdrip-hara.jpg" alt="RAWDRIP Harajuku">
                 </div>
                 <div class="result-data">
-                    <h2>RAWDRIP Harajuku</h2>
+                    <h2><a href="https://www.instagram.com/rawdrip_harajuku/">RAWDRIP Harajuku</a></h2>
                     <div class="result-details">
                         <p>住所 ： 〒150-0001 東京都渋谷区神宮前4-28-22 ベル・パルス原宿 2F</p>
                         <p>電話番号 ： 03-3796-6338</p>
                         <p>営業時間 ： 11:00～20:30</p>
                         <p>定休日 ： 無休</p>
-                        <p>取扱ブランド ： Carhartt, Dickies</p>    
+                        <p>取扱ブランド ： Carhartt, Dickies</p>
                     </div>
                 </div>
             </div>
 
             <div class="result-item">
                 <div class="result-image">
-                    <img src="C:/Users/yamah/portfolio/img/prov.JPG" alt="prov">
+                    <img src="img/TheBeShare.JPG" alt="TheBeShare">
                 </div>
                 <div class="result-data">
-                    <h2>PROV</h2>
+                    <h2><a href="http://www.timeforlivin.com/the-be-share/">THE BE-SHARE</a></h2>
                     <div class="result-details">
-                        <p>住所 ： 〒150-0001 東京都渋谷区神宮前４丁目２８−１８ カトル・バン原宿 2F</p>
-                        <p>電話番号 ： 03-6447-0660</p>
-                        <p>営業時間 ： 11:00～20:30</p>
+                        <p>住所 ： 〒460-0011 愛知県名古屋市中区大須3-18-34</p>
+                        <p>電話番号 ： 052-251-1701</p>
+                        <p>営業時間 ： 平日:12:00～20:00　土日祝:11:00～20:00</p>
                         <p>定休日 ： 無休</p>
-                        <p>取扱ブランド ： HELLRAZOR, ALLTIMERS</p>    
+                        <p>取扱ブランド ： THE BE-SHARE,, SON OF THE CHEESE, EVISEN SKATEBOARDS</p>
                     </div>
                 </div>
             </div>
@@ -84,4 +124,5 @@
     </main>
     <!-- script src="script.js"></!-->
 </body>
+
 </html>
