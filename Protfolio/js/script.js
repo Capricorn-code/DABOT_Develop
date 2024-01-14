@@ -19,39 +19,38 @@ if (searchForm) {
 
 // ソート処理
 function sortResults(results) {
-  var sortOrder = document.getElementById('sort-order').value;
-
-  // ソート順に応じて処理を実行
-  switch (sortOrder) {
-    case 'nameAsc':
-      results.sort(function (a, b) {
-        return a.name.localeCompare(b.name);
-      });
-      break;
-    case 'nameDesc':
-      results.sort(function (a, b) {
-        return b.name.localeCompare(a.name);
-      });
-      break;
-    case 'addressAsc':
-      results.sort(function (a, b) {
-        return a.address.localeCompare(b.address);
-      });
-      break;
-    case 'addressDesc':
-      results.sort(function (a, b) {
-        return b.address.localeCompare(a.address);
-      });
-      break;
-    default:
-      // デフォルトは初期の検索結果の表示
-      results.sort(function (a, b) {
-        return a.name.localeCompare(b.name);
-      });
-  }
-
-  // ソート後の結果を表示
+  var sortOrder = document.getElementById('sort-order').addEventListener('change', (event) => {
+    // ソート順に応じて処理を実行
+    switch (sortOrder) {
+      case 'nameAsc':
+        results.sort(function (a, b) {
+          return a.name.localeCompare(b.name);
+        });
+        break;
+      case 'nameDesc':
+        results.sort(function (a, b) {
+          return b.name.localeCompare(a.name);
+        });
+        break;
+      case 'addressAsc':
+        results.sort(function (a, b) {
+          return a.address.localeCompare(b.address);
+        });
+        break;
+      case 'addressDesc':
+        results.sort(function (a, b) {
+          return b.address.localeCompare(a.address);
+        });
+        break;
+      default:
+        // デフォルトは初期の検索結果の表示
+        results.sort(function (a, b) {
+          return a.name.localeCompare(b.name);
+        });
+    }
+    // ソート後の結果を表示
   displayResults(results);
+  });
 }
 
 function searchAndDisplayResults(keyword) {
