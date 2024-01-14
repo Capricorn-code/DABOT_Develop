@@ -280,7 +280,7 @@ body {
 
 .search-form-005 {
     position: absolute;
-    top: 700px; /* 画像の上からの距離を調整 (適切な値に変更) */
+    top: 640px; /* 画像の上からの距離を調整 (適切な値に変更) */
     left: 50%; /* 画像の中央に配置 */
     transform: translateX(-50%); /* 画像の中央に配置 */
    /* background-color: rgba(255, 255, 255, 0.7); /* 背景色を設定 */
@@ -295,13 +295,15 @@ body {
     font-weight: bold; /* フォントの太さを変更 */
     transform: skew(-15deg); /* 文字を斜めに傾ける */
     color: #333333;
+    position: relative; /* 相対位置指定 */
+    right: -30px; /* 50px右に移動 */
 }
 
 /*検索ボックスのスタイル*/
 
 #keyword {
-    width: 250px; /* 幅を変更 */
-    height: 40px; /* 高さを変更 */
+    width: 330px; /* 幅を変更 */
+    height: 60px; /* 高さを変更 */
     padding: 10px; /* テキストの内側の余白を調整 */
     border: 1px solid #ccc; /* 枠線の設定 */
     border-radius: 5px; /* 角丸を追加 */
@@ -312,8 +314,8 @@ body {
 
 /* 検索ボタンのスタイル */
 #ID_SUBMIT {
-    width: 100px;
-    height: 40px;
+    width: 120px;
+    height: 60px;
     background-color: #333333; /* 背景色を変更 */
     color: #fff; /* テキスト色を変更 */
     border: none;
@@ -332,7 +334,7 @@ body {
 /* エリアから検索ボタンのスタイル */
 #openRegionPopup {
     margin-left: 20px;
-    width: 300px;
+    width: 400px;
     height: 40px;
     background-color: #333333; /* 背景色を変更 */
     color: #fff; /* テキスト色を変更 */
@@ -346,7 +348,7 @@ body {
 /* エリアから検索ボタンのホバー時のスタイル */
 #openRegionPopup:hover {
     background-color: #555555; /* ホバー時の背景色を変更 */
-    /* color: #fff; */ /* ホバー時のテキスト色を変更 */
+    /* color: #fff;  /* ホバー時のテキスト色を変更 */
     /* 他のホバースタイルを追加 */
 }
 
@@ -362,8 +364,11 @@ body {
     border-radius: 8px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
     z-index: 9999;
-    max-width: 300px;
-    width: 90%;
+    width: 80%; /* 幅を大きくする */
+    max-width: 600px; /* 最大幅を設定 */
+    height: 80%; /* 高さを大きくする */
+    /*max-height: 80vh; /* ビューポートの高さの80%まで表示 */
+    overflow-y: auto; /* コンテンツがビューポートを超えた場合にスクロールバーを表示 */
 }
 
 /* タイトルのスタイル */
@@ -372,56 +377,71 @@ body {
     font-size: 1.5em;
     color: #333;
     text-align: center;
+    font-weight: bold; /* 太字にする */
 }
 
-/* 下線（区切り線）のスタイル */
-#regionPopup h2::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: #333;
-    position: absolute;
-    bottom: -10px;
-    left: 0;
+#regionPopup legend {
+    font-size: 1.1em; /* フォントサイズを大きくする */
+}
+
+#regionPopup label {
+    font-size: 1.1em; /* フォントサイズを1.5emに設定 */
+    color: #444444; /* 文字色を設定（例：黒色） */
+    margin-right: 10px; /* チェックボックスとラベルの間の右側のスペースを設定 */
 }
 
 /* チェックボックスとラベルのスタイル */
-#regionForm label {
+ #regionForm label {
     display: inline-block; /* インラインブロック要素として表示 */
     margin-bottom: 15px;
-    font-size: 1.2em;
-    color: #555;
-    width: 40%; /* 幅を設定して5つのチェックボックスで折り返す */
-}
+    /*width: 40%; 幅を設定して5つのチェックボックスで折り返す */
+} 
 
 /* 5個ごとに改行 */
-#regionForm label:nth-child(5n + 1) {
+/* #regionForm label:nth-child(5n + 1) {
     clear: left; /* 5個ごとに改行 */
-}
+/* } */
 
 
-/* ボタンのスタイル */
-#regionPopup input[type="button"] {
-    padding: 10px 30px;
+/* ポップアップ内のボタンのスタイル */
+ #regionPopup input[type="button"] {
+    /* padding: 10px 30px; */
     border: none;
-    border-radius: 5px;
-    background-color: #333333;
+    /* border-radius: 5px; */
+    background-color: #444444;
     color: #fff;
     cursor: pointer;
-    font-size: 1.2em;
-    margin-right: 10px;
+    /* font-size: 1.2em; */
+    margin-right: 20px;
     text-align: center; /* テキストを中央揃え */
-    line-height: 1; /* ボタンの高さとテキストの高さを一致させる */
+    /* line-height: 1; ボタンの高さとテキストの高さを一致させる */
     /* ボタンのスタイル */
-    width: 100%;
-}
+    /* width: 100%; */
+    position: relative;
+    top: 30px; /* 好みの位置に調整 */
+ }  
 
 /* ボタンのホバーエフェクト */
 #regionPopup input[type="button"]:hover {
     background-color: #D3D3D3;
 }
 
+/* ポップアップ内のチェックボックスのスタイル */
+input[type="checkbox"] {
+    /* チェックボックスのサイズ */
+    width: 20px;
+    height: 15px;
+    /* 未選択時の背景色 */
+    background-color: #fff;
+    /* チェックマークのスタイル */
+    border: 2px solid #666;
+    border-radius: 4px;
+}
+
+/* チェックされた状態のスタイル */
+input[type="checkbox"]:checked {
+    background-color: #666;
+}
 
 /* オーバーレイのスタイル */
 #overlay {
@@ -434,3 +454,108 @@ body {
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
+
+/*ブラント画像の設定*/
+
+figure {
+    position: relative;
+    overflow: hidden;
+}
+
+figure:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* ホバー時の背景色 */
+    opacity: 0; /* ホバー時の透明度 */
+    transition: opacity 0.3s ease-in-out; /* アニメーション効果 */
+}
+
+figure:hover figcaption {
+    opacity: 1; /* ホバー時のキャプションの透明度 */
+    transition: opacity 0.3s ease-in-out; /* アニメーション効果 */
+}
+
+#popupFooter {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    /* 他の適切なスタイルを追加 */
+}
+
+/* その他のブランドボタンのスタイル */
+.center button {
+    font-size: 24px; /* フォントサイズを変更 */
+    width: 300px; /* 幅を変更 */
+    height: 60px; /* 高さを変更 */
+}
+
+.center button:hover {
+    background-color: #AAAAAA; /* ホバー時の背景色を変更 */
+    /*color: #fff;*/ /* ホバー時のテキスト色を変更 */
+    /* 他のホバースタイルを追加 */
+}
+
+#foot_content {
+    font-size: 18px; /* フォントサイズを変更 */
+    text-align: center; /* テキストを中央揃え */
+}
+
+/* バリデーションのポップアップ */
+/* ポップアップスタイル */
+.custom-alert {
+    display: none;
+    position: fixed;
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #C0C0C0; /* ピンク系の背景色 */
+    color: #333; /* 文字色を濃いめの色にする */
+    padding: 20px;
+    border-radius: 10px; /* 角丸にする */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影をつける */
+    z-index: 9999;
+    font-weight: bold; /* 文字を太くする */
+}
+
+.custom-alert button {
+    margin-top: 10px;
+    background-color: #333; /* ボタンの背景色を赤系にする */
+    color: #fff; /* ボタンの文字色を白にする */
+    border: none;
+    /* padding: 8px 16px; */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+}
+
+.custom-alert button:hover {
+    background-color: #808080; /* ホバー時のボタンの背景色を変更 */
+}
+
+/* モーダルのスタイル */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* 背景を半透明に */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
